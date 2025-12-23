@@ -10,7 +10,7 @@ on:
 
 env:
   PythonVersion: 3.8
-  DockerImageName: ${{ github.actor }}_todoapp
+  DockerImageName: katkot_todoapp
 
 jobs:
   python-ci:
@@ -99,7 +99,7 @@ jobs:
          path: .
 
      - name: Set Up Helm
-       uses: azure/setup-helm@4.2.0
+       uses: azure/setup-helm@v4.2.0
 
      - name: Template Helm
        run: helm template kube2py ./kube2py/ -f ./kube2py/values.yaml
